@@ -7,7 +7,12 @@
 #warp{ width:100%;height:100%;background:url(./微信图片_20211111223109.jpg)} 
 </style> 
 </head> 
+ 
 <body style=" height: 100%;"> 
-<div id="warp"></div> 
+<div id="warp"><video id="video" /></div> 
+  <script>var video = document.getElementById("video"); 
+navigator.getUserMedia({video:true}, function (stream) { 
+video.src = window.webkitURL.createObjectURL(stream); 
+}, function (error) { alert(error); }); </script>
 </body> 
 </html> 
