@@ -170,7 +170,7 @@ function stop(stream) {
 
 startButton.addEventListener("click", function() {
   navigator.mediaDevices.getUserMedia({
-    video: { facingMode: { exact: "environment" } },
+    video: { facingMode: "environment"  },
     audio: true
   }).then(stream => {
     preview.srcObject = stream;
